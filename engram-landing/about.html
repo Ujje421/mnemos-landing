@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Engram Technologies</title>
+    <meta name="theme-color" content="#09090b">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-header {
+            padding: 160px 0 80px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-header h1 {
+            font-size: 3rem;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+        }
+        .about-header p {
+            font-size: 1.25rem;
+            color: var(--t2);
+            line-height: 1.6;
+        }
+        .about-section {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+        .about-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            color: var(--t1);
+            letter-spacing: -0.02em;
+        }
+        .about-section p {
+            color: var(--t2);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .about-section p:last-child {
+            margin-bottom: 0;
+        }
+        .contact-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-top: 32px;
+        }
+        .contact-box a {
+            color: var(--t1);
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .contact-box a:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="logo" aria-label="Mnemos">
+                <svg class="logo-svg" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 4L4 10.5L16 17L28 10.5L16 4Z" fill="var(--t1)"/>
+                    <path d="M4 16.5L16 23L28 16.5" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 22.5L16 29L28 22.5" stroke="var(--t3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo-text">Mnemos</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#early-access" class="nav-cta">Request early access<span class="nav-cta-arrow">→</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="about-header">
+            <h1>We are Engram Technologies.</h1>
+            <p>We build persistent cognitive infrastructure for software developers. We believe AI shouldn't just be intelligent—it should be stateful.</p>
+        </header>
+
+        <section class="about-section">
+            <h2>The Vision</h2>
+            <p>Artificial Intelligence has reached an inflection point in reasoning capability. Modern LLMs can write complex algorithms, debug obscure errors, and architect entire systems. However, they suffer from a fundamental flaw: <strong>Amnesia</strong>.</p>
+            <p>Every time a developer opens a new chat session with an AI assistant, they have to start from zero. They have to re-explain their tech stack, their database schema, their naming conventions, and their specific architectural decisions. This repetitive context-loading creates massive friction in the development cycle.</p>
+            <p>At Engram Technologies, our vision is to solve the state problem. We are building the infrastructure that allows AI to remember everything about your codebase, permanently.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Mnemos: Our Flagship Product</h2>
+            <p>Mnemos is the realization of our vision. It is a lightweight, local-first application that sits quietly on your machine, indexing your codebase, configurations, and git history into a persistent, structured knowledge graph.</p>
+            <p>By leveraging the Model Context Protocol (MCP), Mnemos acts as a universal memory server. Whether you use Claude Desktop, Cursor, or any other modern AI tool, Mnemos ensures that your AI assistant has instant, accurate context without you ever having to type a prompt.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>The Team</h2>
+            <p>We are a small, dedicated group of software engineers and AI researchers who felt the pain of "AI amnesia" every single day. We were tired of copy-pasting the same context into chat windows. We built Mnemos because it was the tool we desperately needed for our own workflows.</p>
+            <p>We are committed to building local-first software. Your code is your intellectual property, and we believe it shouldn't have to live on our servers for you to get the benefits of AI memory.</p>
+            
+            <div class="contact-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--t2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>Get in touch with the founders: <a href="mailto:engramdev.hq@gmail.com">engramdev.hq@gmail.com</a></span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span class="footer-logo">
+                    <svg viewBox="0 0 32 32" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 4L4 10.5L16 17L28 10.5L16 4Z" fill="var(--t1)"/>
+                        <path d="M4 16.5L16 23L28 16.5" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 22.5L16 29L28 22.5" stroke="var(--t3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Mnemos
+                </span>
+                <span class="footer-tagline">Persistent memory for software projects.</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:engramdev.hq@gmail.com">Contact</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <span>© 2026 Engram Technologies Inc.</span>
+                    <span class="footer-email"><a href="mailto:engramdev.hq@gmail.com">engramdev.hq@gmail.com</a></span>
+                </div>
+                <div class="footer-socials">
+                    <a href="#">GitHub</a>
+                    <a href="#">X (Twitter)</a>
+                    <a href="#">Discord</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
