@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Mnemos</title>
+    <meta name="theme-color" content="#09090b">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .legal-page {
+            max-width: 680px;
+            margin: 120px auto;
+            padding: 0 24px;
+        }
+        .legal-title {
+            font-size: 32px;
+            font-weight: 500;
+            color: var(--t1);
+            margin-bottom: 8px;
+            letter-spacing: -0.03em;
+        }
+        .legal-meta {
+            color: var(--t3);
+            font-size: 14px;
+            margin-bottom: 48px;
+        }
+        .legal-content h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--t1);
+            margin: 40px 0 16px 0;
+            letter-spacing: -0.01em;
+        }
+        .legal-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--t2);
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="logo" aria-label="Mnemos">
+                <svg class="logo-svg" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 4L4 10.5L16 17L28 10.5L16 4Z" fill="var(--t1)"/>
+                    <path d="M4 16.5L16 23L28 16.5" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 22.5L16 29L28 22.5" stroke="var(--t3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo-text">Mnemos</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#early-access" class="nav-cta">Request early access<span class="nav-cta-arrow">→</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="legal-page">
+        <h1 class="legal-title">Privacy Policy</h1>
+        <div class="legal-meta">Last updated: July 2026</div>
+
+        <div class="legal-content">
+            <h2>1. Your Code Stays Yours</h2>
+            <p>Mnemos is a local-first application. Your codebase, architectural decisions, and AI conversations are stored locally on your machine in a local database (SQLite). We do not transmit your code to our servers. Your project's context never leaves your device unless you explicitly send it to an external AI provider.</p>
+
+            <h2>2. Telemetry and Usage</h2>
+            <p>The desktop application may collect anonymous, aggregated crash reports to help us improve stability. You can opt out of this entirely in the application settings. We do not track your specific queries or code.</p>
+
+            <h2>3. Waitlist Data</h2>
+            <p>If you sign up for our early access waitlist, we only collect your email address. We will only use this to notify you about product updates and your access status. We will never sell your email to third parties or spam you.</p>
+
+            <h2>4. Third-Party AI Providers</h2>
+            <p>Mnemos connects to external LLMs (like OpenAI or Anthropic) via API keys you provide, or locally via tools like Ollama. When you use external providers, your prompts and injected context are subject to their respective privacy policies. Mnemos itself acts as a local proxy and does not intercept or read this data.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <span class="footer-logo">
+                    <svg class="logo-svg logo-svg--sm" viewBox="0 0 32 32" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 4L4 10.5L16 17L28 10.5L16 4Z" fill="var(--t1)"/>
+                        <path d="M4 16.5L16 23L28 16.5" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 22.5L16 29L28 22.5" stroke="var(--t3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Mnemos
+                </span>
+                <span class="footer-tagline">Persistent memory for software projects.</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:mnemosdev.hq@gmail.com">Contact</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <span>© 2026 Mnemos Technologies Inc.</span>
+                    <span class="footer-email"><a href="mailto:mnemosdev.hq@gmail.com">mnemosdev.hq@gmail.com</a></span>
+                </div>
+                <div class="footer-socials">
+                    <a href="#">GitHub</a>
+                    <a href="#">Twitter</a>
+                    <a href="https://discord.gg/M5Q8EJBfh" target="_blank" rel="noopener">Discord</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

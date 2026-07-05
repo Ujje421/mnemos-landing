@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mnemos — Persistent Memory for Software Projects</title>
+    <meta name="description" content="Mnemos gives software projects a persistent memory that every AI tool can access. Stop re-explaining your codebase. Your project remembers.">
+    <meta name="theme-color" content="#09090b">
+
+    <meta property="og:title" content="Mnemos — Persistent Memory for Software Projects">
+    <meta property="og:description" content="AI is intelligent. But it doesn't remember. Mnemos changes that.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="logo" aria-label="Mnemos">
+                <svg class="logo-svg" viewBox="0 0 32 32" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 4L4 10.5L16 17L28 10.5L16 4Z" fill="var(--t1)"/>
+                    <path d="M4 16.5L16 23L28 16.5" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 22.5L16 29L28 22.5" stroke="var(--t3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo-text">Mnemos</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#how-it-works">How it works</a>
+                <a href="#principles">Principles</a>
+                <a href="#early-access" class="nav-cta">Request early access<span class="nav-cta-arrow">→</span></a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ═══════════════ HERO ═══════════════ -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">
+                    Every AI conversation<br>starts from zero.
+                </h1>
+                <p class="hero-sub">
+                    Mnemos gives software projects a persistent memory.<br>
+                    Your project's knowledge follows you across every AI tool, every session.
+                </p>
+                <a href="#early-access" class="cta-btn">
+                    Request early access<span class="cta-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ═══════════════ PROBLEM ═══════════════ -->
+        <section class="problem" id="problem">
+            <div class="container">
+                <span class="label">The problem</span>
+                <div class="repetition" id="repetition">
+                    <div class="rep-line" data-delay="0">
+                        <span class="rep-tool">Claude</span>
+                        <span class="rep-arrow">→</span>
+                        <span class="rep-text">"I'm building a Node.js API with PostgreSQL. The auth uses JWT stored in HttpOnly cookies. We use Express with a repository pattern…"</span>
+                    </div>
+                    <div class="rep-line" data-delay="1">
+                        <span class="rep-tool">ChatGPT</span>
+                        <span class="rep-arrow">→</span>
+                        <span class="rep-text">"I'm building a Node.js API with PostgreSQL. The auth uses JWT stored in HttpOnly cookies. We use Express with a repository pattern…"</span>
+                    </div>
+                    <div class="rep-line" data-delay="2">
+                        <span class="rep-tool">Cursor</span>
+                        <span class="rep-arrow">→</span>
+                        <span class="rep-text">"I'm building a Node.js API with PostgreSQL. The auth uses JWT stored in HttpOnly cookies. We use Express with a repository pattern…"</span>
+                    </div>
+                    <div class="rep-line" data-delay="3">
+                        <span class="rep-tool">Yesterday</span>
+                        <span class="rep-arrow">→</span>
+                        <span class="rep-text">"I'm building a Node.js API with PostgreSQL. The auth uses JWT stored in HttpOnly cookies. We use Express with a repository pattern…"</span>
+                    </div>
+                    <div class="rep-line" data-delay="4">
+                        <span class="rep-tool">Last week</span>
+                        <span class="rep-arrow">→</span>
+                        <span class="rep-text">"I'm building a Node.js API with PostgreSQL. The auth uses JWT stored in HttpOnly cookies. We use Express with a repository pattern…"</span>
+                    </div>
+                    <div class="rep-line" data-delay="5">
+                        <span class="rep-tool">Last month</span>
+                        <span class="rep-arrow">→</span>
+                        <span class="rep-text">"I'm building a Node.js API with PostgreSQL. The auth uses JWT stored in HttpOnly cookies. We use Express with a repository pattern…"</span>
+                    </div>
+                </div>
+                <p class="problem-note">You've typed this before. Many times.</p>
+            </div>
+        </section>
+
+        <!-- ═══════════════ INSIGHT ═══════════════ -->
+        <section class="insight" id="insight">
+            <div class="container">
+                <h2 class="insight-text">
+                    Intelligence is no longer the bottleneck.<br>
+                    <span class="insight-em">Memory is.</span>
+                </h2>
+            </div>
+        </section>
+
+        <!-- ═══════════════ SOLUTION ═══════════════ -->
+        <section class="solution" id="solution">
+            <div class="container">
+                <span class="label">The shift</span>
+                <h2 class="section-title">Projects should remember themselves.</h2>
+                <p class="section-desc">
+                    Instead of AI remembering conversations, projects own their knowledge.<br>
+                    AI becomes stateless. Projects become stateful.
+                </p>
+
+                <div class="before-after">
+                    <div class="ba-panel ba-before">
+                        <span class="ba-label">Without Mnemos</span>
+                        <div class="ba-code">
+                            <div class="ba-line"><span class="ba-dim">&gt;</span> New chat with Claude</div>
+                            <div class="ba-line"><span class="ba-dim">&gt;</span> <span class="ba-typing">"I'm building a Node.js API with PostgreSQL.</span></div>
+                            <div class="ba-line"><span class="ba-dim">&gt;</span> <span class="ba-typing">The auth uses JWT stored in HttpOnly cookies.</span></div>
+                            <div class="ba-line"><span class="ba-dim">&gt;</span> <span class="ba-typing">We use Express with a middleware pattern.</span></div>
+                            <div class="ba-line"><span class="ba-dim">&gt;</span> <span class="ba-typing">The database has users, sessions, and</span></div>
+                            <div class="ba-line"><span class="ba-dim">&gt;</span> <span class="ba-typing">organizations tables. Rate limiting uses…"</span></div>
+                            <div class="ba-line ba-line--empty"></div>
+                            <div class="ba-line"><span class="ba-muted">12 minutes re-explaining your project</span></div>
+                        </div>
+                    </div>
+                    <div class="ba-panel ba-after">
+                        <span class="ba-label">With Mnemos</span>
+                        <div class="ba-code">
+                            <div class="ba-line"><span class="ba-dim">&gt;</span> "Add rate limiting to the auth endpoints"</div>
+                            <div class="ba-line ba-line--empty"></div>
+                            <div class="ba-line"><span class="ba-check">✓</span> 3 relevant memories injected <span class="ba-muted">(847 tokens)</span></div>
+                            <div class="ba-line"><span class="ba-muted">  Auth architecture · Middleware pattern · Redis config</span></div>
+                            <div class="ba-line ba-line--empty"></div>
+                            <div class="ba-line"><span class="ba-dim">&gt;</span> "Based on your Express middleware pattern</div>
+                            <div class="ba-line"><span class="ba-dim">&gt;</span>  and existing Redis connection, here's a</div>
+                            <div class="ba-line"><span class="ba-dim">&gt;</span>  rate limiter for your auth routes…"</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════ ARCHITECTURE ═══════════════ -->
+        <section class="architecture" id="architecture">
+            <div class="container">
+                <span class="label">Architecture</span>
+                <h2 class="section-title">How context flows.</h2>
+
+                <div class="arch-diagram">
+                    <div class="arch-col">
+                        <div class="arch-box">
+                            <span class="arch-box-label">Source</span>
+                            <span class="arch-box-title">Your Project</span>
+                            <div class="arch-box-items">
+                                <span>Source code</span>
+                                <span>Git history</span>
+                                <span>Configs</span>
+                                <span>Documentation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arch-connector"><span>→</span></div>
+                    <div class="arch-col">
+                        <div class="arch-box arch-box--core">
+                            <span class="arch-box-label">Mnemos</span>
+                            <span class="arch-box-title">Memory Engine</span>
+                            <div class="arch-box-items">
+                                <span>Knowledge Graph</span>
+                                <span>Vector Search</span>
+                                <span>Event Store</span>
+                                <span>Freshness Scoring</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arch-connector"><span>→</span></div>
+                    <div class="arch-col">
+                        <div class="arch-box">
+                            <span class="arch-box-label">Retrieval</span>
+                            <span class="arch-box-title">Context Builder</span>
+                            <div class="arch-box-items">
+                                <span>Semantic search</span>
+                                <span>Graph traversal</span>
+                                <span>Budget allocation</span>
+                                <span>Compression</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arch-connector"><span>→</span></div>
+                    <div class="arch-col">
+                        <div class="arch-box">
+                            <span class="arch-box-label">Output</span>
+                            <span class="arch-box-title">Any AI Model</span>
+                            <div class="arch-box-items">
+                                <span>Claude</span>
+                                <span>GPT</span>
+                                <span>Gemini</span>
+                                <span>Local models</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="arch-note">Everything runs locally. No code leaves your machine.</p>
+            </div>
+        </section>
+
+        <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+        <section class="how" id="how-it-works">
+            <div class="container">
+                <span class="label">How it works</span>
+                <h2 class="section-title">Three steps to persistent memory.</h2>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-header">
+                            <span class="step-num">01</span>
+                            <div>
+                                <h3 class="step-title">Point Mnemos at your project</h3>
+                                <p class="step-desc">
+                                    Mnemos scans your codebase, configs, docs, and git history. 
+                                    It builds a structured knowledge graph of everything your AI needs to know. 
+                                    Embeddings are generated locally — nothing leaves your machine.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="terminal">
+                            <div class="terminal-bar">
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-title">terminal</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="t-line"><span class="t-prompt">$</span> mnemos init ./my-project</div>
+                                <div class="t-line t-dim">Scanning project structure…</div>
+                                <div class="t-line t-dim">Found: 247 source files, 12 configs, 3 schemas</div>
+                                <div class="t-line t-dim">Generating local embeddings…</div>
+                                <div class="t-line t-dim">Building knowledge graph…</div>
+                                <div class="t-line t-ok">✓ 1,847 knowledge fragments indexed</div>
+                                <div class="t-line t-ok">✓ MCP server running on localhost:3847</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <span class="step-num">02</span>
+                            <div>
+                                <h3 class="step-title">Connect any AI tool</h3>
+                                <p class="step-desc">
+                                    Mnemos exposes a local MCP server. Connect it to Claude, 
+                                    VS Code, Cursor, or any MCP-compatible tool. One config line. 
+                                    Your project memory becomes universally accessible.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="terminal">
+                            <div class="terminal-bar">
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-title">claude_desktop_config.json</span>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="t-line">{</div>
+                                <div class="t-line">  <span class="t-key">"mcpServers"</span>: {</div>
+                                <div class="t-line">    <span class="t-key">"mnemos"</span>: {</div>
+                                <div class="t-line">      <span class="t-key">"command"</span>: <span class="t-str">"mnemos"</span>,</div>
+                                <div class="t-line">      <span class="t-key">"args"</span>: [<span class="t-str">"serve"</span>, <span class="t-str">"--project"</span>, <span class="t-str">"./my-project"</span>]</div>
+                                <div class="t-line">    }</div>
+                                <div class="t-line">  }</div>
+                                <div class="t-line">}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <span class="step-num">03</span>
+                            <div>
+                                <h3 class="step-title">AI already knows your project</h3>
+                                <p class="step-desc">
+                                    Ask any question. Mnemos retrieves the relevant context — 
+                                    architecture decisions, schemas, conventions — and injects it 
+                                    automatically. The AI responds as if it's been working on your project for months.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="chat-mock">
+                            <div class="chat-line chat-user">
+                                <span class="chat-role">You</span>
+                                <span class="chat-body">Add rate limiting to the auth endpoints</span>
+                            </div>
+                            <div class="chat-line chat-context">
+                                <span class="chat-role">Mnemos</span>
+                                <span class="chat-body">
+                                    <span class="chat-injected">3 memories injected</span>
+                                    <span class="chat-details">Auth architecture · Middleware pattern · Redis config</span>
+                                </span>
+                            </div>
+                            <div class="chat-line chat-ai">
+                                <span class="chat-role">Claude</span>
+                                <span class="chat-body">Based on your Express middleware pattern and existing Redis connection, here's a rate limiter using <code>express-rate-limit</code> with a Redis store that fits your auth flow…</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════ PRODUCT ═══════════════ -->
+        <section class="product" id="product">
+            <div class="container">
+                <span class="label">The product</span>
+                <h2 class="section-title">See your project's memory.</h2>
+                <p class="section-desc">
+                    Mnemos is a desktop application. A local dashboard for your project's knowledge — 
+                    decisions, architecture, schemas, conventions, and AI conversation history.
+                </p>
+
+                <!-- Memory Timeline Mockup -->
+                <div class="product-screen">
+                    <div class="product-screen-bar">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="product-screen-title">Mnemos — my-project / Memory Timeline</span>
+                    </div>
+                    <div class="product-screen-body">
+                        <div class="mock-sidebar">
+                            <div class="mock-sidebar-section">
+                                <span class="mock-sidebar-label">Project</span>
+                                <span class="mock-sidebar-item mock-sidebar-item--active">my-project</span>
+                            </div>
+                            <div class="mock-sidebar-section">
+                                <span class="mock-sidebar-label">Knowledge</span>
+                                <span class="mock-sidebar-item">Architecture</span>
+                                <span class="mock-sidebar-item">Conventions</span>
+                                <span class="mock-sidebar-item">Schemas</span>
+                                <span class="mock-sidebar-item">Decisions</span>
+                                <span class="mock-sidebar-item">APIs</span>
+                            </div>
+                            <div class="mock-sidebar-section">
+                                <span class="mock-sidebar-label">Tools</span>
+                                <span class="mock-sidebar-item">Timeline</span>
+                                <span class="mock-sidebar-item">Graph</span>
+                                <span class="mock-sidebar-item">Inspector</span>
+                            </div>
+                        </div>
+                        <div class="mock-main">
+                            <div class="mock-header">
+                                <span class="mock-title">Memory Timeline</span>
+                                <span class="mock-meta">23 active memories · 2 stale · 0 conflicts</span>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline-group">
+                                    <span class="timeline-date">Today</span>
+                                    <div class="timeline-item">
+                                        <span class="timeline-dot timeline-dot--blue"></span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-type">Convention</span>
+                                            <span class="timeline-title-text">Error handling uses RFC 7807 Problem Details</span>
+                                            <span class="timeline-source">Extracted from error-handler.ts</span>
+                                        </div>
+                                        <span class="timeline-confidence">0.92</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-dot timeline-dot--green"></span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-type">Schema</span>
+                                            <span class="timeline-title-text">Added sessions table with TTL column</span>
+                                            <span class="timeline-source">Extracted from migration 003_sessions.sql</span>
+                                        </div>
+                                        <span class="timeline-confidence">0.98</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-group">
+                                    <span class="timeline-date">3 days ago</span>
+                                    <div class="timeline-item">
+                                        <span class="timeline-dot timeline-dot--amber"></span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-type">Decision</span>
+                                            <span class="timeline-title-text">Chose PostgreSQL over MongoDB</span>
+                                            <span class="timeline-source">User recorded · Rationale: relational data, ACID</span>
+                                        </div>
+                                        <span class="timeline-confidence">1.00</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="timeline-dot timeline-dot--blue"></span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-type">Architecture</span>
+                                            <span class="timeline-title-text">Auth uses JWT with HttpOnly cookies</span>
+                                            <span class="timeline-source">Extracted from auth.middleware.ts</span>
+                                        </div>
+                                        <span class="timeline-confidence">0.95</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-group">
+                                    <span class="timeline-date">1 week ago</span>
+                                    <div class="timeline-item timeline-item--stale">
+                                        <span class="timeline-dot timeline-dot--gray"></span>
+                                        <div class="timeline-content">
+                                            <span class="timeline-type">Convention <span class="timeline-stale-badge">Stale</span></span>
+                                            <span class="timeline-title-text">Use Mocha for testing</span>
+                                            <span class="timeline-source">README.md · Contradiction: package.json shows Vitest</span>
+                                        </div>
+                                        <span class="timeline-confidence timeline-confidence--low">0.31</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Context Inspector Mockup -->
+                <div class="product-screen" style="margin-top: 2rem;">
+                    <div class="product-screen-bar">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="product-screen-title">Mnemos — my-project / Context Inspector</span>
+                    </div>
+                    <div class="product-screen-body">
+                        <div class="inspector">
+                            <div class="inspector-query">
+                                <span class="inspector-label">Query</span>
+                                <span class="inspector-q">"Add rate limiting to the auth endpoints"</span>
+                            </div>
+                            <div class="inspector-results">
+                                <span class="inspector-label">Injected context <span class="inspector-meta">3 memories · 847 tokens · $0.003 estimated cost</span></span>
+                                <div class="inspector-memory">
+                                    <div class="inspector-memory-header">
+                                        <span class="inspector-memory-type">Architecture</span>
+                                        <span class="inspector-memory-score">0.94 relevance</span>
+                                    </div>
+                                    <span class="inspector-memory-title">Auth uses JWT with HttpOnly cookies via Express middleware</span>
+                                    <span class="inspector-memory-source">auth.middleware.ts · Updated 3 days ago</span>
+                                </div>
+                                <div class="inspector-memory">
+                                    <div class="inspector-memory-header">
+                                        <span class="inspector-memory-type">Convention</span>
+                                        <span class="inspector-memory-score">0.87 relevance</span>
+                                    </div>
+                                    <span class="inspector-memory-title">Middleware follows Express next() pattern with error forwarding</span>
+                                    <span class="inspector-memory-source">error-handler.ts · Updated today</span>
+                                </div>
+                                <div class="inspector-memory">
+                                    <div class="inspector-memory-header">
+                                        <span class="inspector-memory-type">Integration</span>
+                                        <span class="inspector-memory-score">0.81 relevance</span>
+                                    </div>
+                                    <span class="inspector-memory-title">Redis available at localhost:6379 for session storage</span>
+                                    <span class="inspector-memory-source">docker-compose.yml · Updated 1 week ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════ PRINCIPLES ═══════════════ -->
+        <section class="principles" id="principles">
+            <div class="container">
+                <span class="label">Principles</span>
+                <h2 class="section-title">Built different.</h2>
+                <div class="principles-grid">
+                    <div class="principle">
+                        <h3>Desktop-first</h3>
+                        <p>A native application, not a browser tab. Fast, reliable, always available in your system tray.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>Local-first</h3>
+                        <p>Your data lives on your machine. Embeddings generated locally. No server required to function.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>Privacy-first</h3>
+                        <p>No code ever leaves your device. Cloud sync is optional and end-to-end encrypted. Your keys, your data.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>Git-native</h3>
+                        <p>Understands commits, branches, and history. Extracts decisions from your actual development workflow.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>Model-agnostic</h3>
+                        <p>Works with Claude, GPT, Gemini, Llama, or any model. Your memory is not locked to one provider.</p>
+                    </div>
+                    <div class="principle">
+                        <h3>MCP-compatible</h3>
+                        <p>Built on the Model Context Protocol. Integrates with any MCP-compatible AI tool out of the box.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <!-- ═══════════════ FOUNDER NOTE ═══════════════ -->
+        <section class="founder-section" id="about">
+            <div class="container founder-inner">
+                <div class="founder-content">
+                    <h2 class="founder-title">Why we're building Mnemos.</h2>
+                    <div class="founder-text">
+                        <p>As developers, we spend hours every week managing context instead of writing code. We found ourselves constantly copy-pasting the same architectural decisions, database schemas, and API rules into Claude, Cursor, and ChatGPT.</p>
+                        <p>The models were getting smarter, but they were trapped in isolated, amnesiac sessions.</p>
+                        <p>We realized that the next major breakthrough in AI-assisted development wouldn't come from a larger context window. It would come from a persistent memory layer. A stateful system that lives alongside your codebase and understands how your project evolves.</p>
+                        <p>We are a small team of engineers building the tool we desperately wanted for ourselves. If you feel the same pain, join us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ═══════════════ CTA ═══════════════ -->
+        <section class="cta-section" id="early-access">
+            <div class="container">
+                <h2 class="cta-title">Your project deserves a memory.</h2>
+                <p class="cta-desc">
+                    We're building Mnemos with a small group of developers who feel this pain every day.<br>
+                    Join the waitlist for early access.
+                </p>
+                <form class="cta-form" id="cta-form">
+                    <div class="cta-input-group">
+                        <input type="email" id="cta-email" class="cta-input" placeholder="you@company.com" required aria-label="Email address">
+                        <button type="submit" class="cta-submit" id="cta-submit">Request early access</button>
+                    </div>
+                    <p class="cta-note">No spam. Just product updates and early access.</p>
+                </form>
+                <div class="cta-success" id="cta-success" hidden>
+                    <span class="cta-success-check">✓</span>
+                    <p>You're on the list. We'll be in touch.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <span class="footer-logo">
+                    <svg class="logo-svg logo-svg--sm" viewBox="0 0 32 32" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 4L4 10.5L16 17L28 10.5L16 4Z" fill="var(--t1)"/>
+                        <path d="M4 16.5L16 23L28 16.5" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 22.5L16 29L28 22.5" stroke="var(--t3)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Mnemos
+                </span>
+                <span class="footer-tagline">Persistent memory for software projects.</span>
+            </div>
+            <div class="footer-links">
+                <a href="#how-it-works">How it works</a>
+                <a href="#principles">Principles</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:mnemosdev.hq@gmail.com">Contact</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <span>© 2026 Mnemos Technologies Inc.</span>
+                    <span class="footer-email"><a href="mailto:mnemosdev.hq@gmail.com">mnemosdev.hq@gmail.com</a></span>
+                </div>
+                <div class="footer-socials">
+                    <a href="#">GitHub</a>
+                    <a href="#">Twitter</a>
+                    <a href="https://discord.gg/M5Q8EJBfh" target="_blank" rel="noopener">Discord</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
