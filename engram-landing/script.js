@@ -137,14 +137,24 @@
             submit.disabled = true;
 
             try {
-                // Replace this URL with your actual Formspree, Loops, or Supabase endpoint
-                const ENDPOINT = 'https://formspree.io/f/placeholder'; 
+                const ENDPOINT = 'https://api.web3forms.com/submit'; 
                 
-                await fetch(ENDPOINT, {
+                const response = await fetch(ENDPOINT, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email })
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ 
+                        access_key: 'df4bd468-356d-4d38-8751-5f82181595b1',
+                        email: email,
+                        subject: 'New Early Access Request (Mnemos)'
+                    })
                 });
+
+                if (!response.ok) {
+                    throw new Error('Form submission failed');
+                }
 
                 form.hidden = true;
                 success.hidden = false;
